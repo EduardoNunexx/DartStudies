@@ -12,7 +12,7 @@ pessoas = [
 'Joaquim|72|Masculino',
 'Helena|24|Feminino',
 'Guilherme|15|Masculino',
-'Manuela|85|Masculino',
+'Manuela|85|Feminino',
 'Leonardo|5|Masculino',
 'Helena|24|Feminino',
 'Laura|29|Feminino',
@@ -24,13 +24,18 @@ pessoas = [
 //4- Find the oldest person and show me their name.
 
 removingDuplicate(pessoas);
+print('fora da lista');
+pessoas.forEach(print);
 counter(pessoas);
+removeMinors(pessoas);
+olderUser(pessoas);
 }
 //1
-void removingDuplicate( List<String> list){
-  list=list.toSet().toList();
-  list.forEach(print);
-}
+void removingDuplicate(List<String> list){
+  var auxList =list.toSet().toList();
+  list.clear();
+  list.addAll(auxList);
+  }
 void counter(List<String> list){
   //2
   var menList =<String>[];
@@ -53,6 +58,31 @@ void counter(List<String> list){
   print("women $women");
   womenList.forEach(print);
 }
-void removeLowAges(){
+void removeMinors(List<String> list){
   
+  /*for(var aux=0; aux<list.length;aux++){
+    var split =list[aux].split('|');
+    if(int.parse(split[1])<18){
+      list.remove(list[aux]);
+    }
+  }*/
+  print("of legal age");
+  list.removeWhere((name){ 
+    var split=name.split('|');
+    return int.parse(split[1])<18;
+  });
+  list.forEach(print);
+}
+void olderUser(List<String> list){
+
+  list.sort((user1,user2){
+    var auxUser1 =user1.split("|");
+    var auxUser2 = user2.split("|");
+    return int.parse(auxUser1[1]).compareTo(int.parse(auxUser2[1]));
+  });
+  var last = list.last .split('|');
+  var newest = list.first.split('|');
+  print("Older user: ${last[0]} with ${last[1]} years.");
+    print("Newest user: ${newest[0]} with ${newest[1]} years.");
+
 }
