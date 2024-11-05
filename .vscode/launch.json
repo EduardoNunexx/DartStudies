@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "01_dart_fundings",
+            "cwd": "01_dart_fundings",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dart_funtions_collections",
+            "cwd": "02_functions_and_collections\\dart_funtions_collections",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dynamyc_imports",
+            "cwd": "03_dynamic_imports\\dynamyc_imports",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "dynamyc_imports (profile mode)",
+            "cwd": "03_dynamic_imports\\dynamyc_imports",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "dynamyc_imports (release mode)",
+            "cwd": "03_dynamic_imports\\dynamyc_imports",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "dart_poo",
+            "cwd": "04_dart_poo\\dart_poo",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
